@@ -1,3 +1,11 @@
 h1 {
-  color: #ffc107;
+  color: black;
+}
+.characteristics {
+  color: #70757a;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
 }
