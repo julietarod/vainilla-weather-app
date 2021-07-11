@@ -11,7 +11,11 @@
 </head>
 <body>
     <div class="container">
+        <div class="appWrapper">
         <div class="weatherBoarder">
+        <div class="overView">
+
+        
 
         <h1>
         Copenhagen 
@@ -24,10 +28,18 @@
             Cloudy
         </li>
     </ul>
+</div>
     <div class="row">
         <div class="col-6">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy"/>
-            12 °C | °F
+            <div class="clearfix weatherTemperature">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" 
+            alt="cloudy" 
+            class="float-left"
+            />
+           <span class="float-left" >
+              <strong>12</strong><span class="units">°C | <a href="#">°F </a> </span> 
+           </span>    
+        </div>
         </div>
         <div class="col-6">
             <ul class="characteristics">
@@ -43,10 +55,12 @@
             </ul>
         </div>
     </div>
-    <small>
-        <a href="https://github.com/julietarod/vainilla-weather-app" target="_blank">Open-source code </a> by Julieta Rod
-    </small>
+    
  </div>
+ <small>
+        <a href="https://github.com/julietarod/vainilla-weather-app" target="_blank">Open-source code </a> by Julieta Rod
+    </small> 
+</div>
     </div>
    
 

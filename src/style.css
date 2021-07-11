@@ -34,10 +34,35 @@ ul {
   padding-top: 6px;
 }
 
-.weatherBoarder {
+.appWrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+.weatherBoarder {
   padding: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
+}
+.overView {
+  margin-bottom: 20px;
+}
+.weatherTemperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+.weatherTemperature strong {
+  color: #202124;
+  display: inline-block;
+  line-height: 64px;
+  vertical-align: top;
+  font-size: 45px;
+  font-weight: 200;
+}
+
+.weatherTemperature .units {
+  position: relative;
+  font-size: 15px;
+  top: -10px;
+  padding: 5px;
 }
