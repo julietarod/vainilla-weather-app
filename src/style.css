@@ -1,6 +1,30 @@
-h1 {
-  color: black;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+  color: #202124;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+  color: #70757a;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .characteristics {
   color: #70757a;
   display: inline-block;
@@ -8,4 +32,12 @@ h1 {
   line-height: 16px;
   padding-left: 9px;
   padding-top: 6px;
+}
+
+.weatherBoarder {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
 }
