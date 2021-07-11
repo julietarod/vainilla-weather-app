@@ -13,6 +13,7 @@ h1 {
 li {
   list-style: none;
   color: #70757a;
+  text-transform: capitalize;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
