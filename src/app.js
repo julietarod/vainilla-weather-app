@@ -37,8 +37,16 @@ function displayTemperature(response) {
 
 }
 
+function search(event) {
+    event.preventDefault();
+}
+
+
 let apiKey = "1c74ccab4b5e12f86079c6c084d79be2";
 let city = "Copenhagen";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
 
 axios.get(apiUrl).then(displayTemperature);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
