@@ -16,7 +16,7 @@ function formatDate(timestamp) {
 
 
 function displayTemperature(response) {
-    console.log(response.data);
+    
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");
@@ -36,17 +36,25 @@ function displayTemperature(response) {
 
 
 }
-
-function search(event) {
-    event.preventDefault();
+function search(city) {
+let apiKey = "1c74ccab4b5e12f86079c6c084d79be2";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+axios.get(apiUrl).then(displayTemperature);   
 }
 
 
-let apiKey = "1c74ccab4b5e12f86079c6c084d79be2";
-let city = "Copenhagen";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+    
+}
 
-axios.get(apiUrl).then(displayTemperature);
+search("milan");
+
+
+
+
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
