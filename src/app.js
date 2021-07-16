@@ -13,7 +13,52 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
 
+    let forecastHTML = `<div class=row>`;
+    
+    forecastHTML = forecastHTML + `
+                <div class="col-2">
+                    <div class="weather-forecast-date">
+                    Sun    
+                    </div>
+                    
+                    <br>
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="image" width="35"/>
+                    <div class="weather-forecast-temperatures">
+                       <span class="weather-forecast-maxTemp">
+                        10°C   
+                       </span>
+                       <span class="weather-forecast-minTemp">
+                         15°C  
+                       </span>  
+                    </div>
+                </div>
+            `;
+    forecastHTML = forecastHTML + `
+                <div class="col-2">
+                    <div class="weather-forecast-date">
+                    Sun    
+                    </div>
+                    
+                    <br>
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="image" width="35"/>
+                    <div class="weather-forecast-temperatures">
+                       <span class="weather-forecast-maxTemp">
+                        10°C   
+                       </span>
+                       <span class="weather-forecast-minTemp">
+                         15°C  
+                       </span>  
+                    </div>
+                </div>
+            `;
+    forecastHTML = forecastHTML + `</div>`;
+     
+    forecastElement.innerHTML = forecastHTML;
+
+}
 
 function displayTemperature(response) {
     
@@ -34,7 +79,6 @@ function displayTemperature(response) {
     iconElement.setAttribute("alt", response.data.weather[0].description)
 
 
-
 }
 function search(city) {
 let apiKey = "1c74ccab4b5e12f86079c6c084d79be2";
@@ -51,6 +95,7 @@ function handleSubmit(event) {
 }
 
 search("milan");
+displayForecast();
 
 
 
