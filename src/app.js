@@ -17,43 +17,29 @@ function displayForecast() {
     let forecastElement = document.querySelector("#forecast");
 
     let forecastHTML = `<div class=row>`;
+    let days = ["Thu", "Fri", "Sat", "Sun"];
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+                <div class="col-2">
+                    <div class="weather-forecast-date">
+                    ${day}    
+                    </div>
+                    
+                    <br>
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="image" width="35"/>
+                    <div class="weather-forecast-temperatures">
+                       <span class="weather-forecast-maxTemp">
+                        10°C   
+                       </span>
+                       <span class="weather-forecast-minTemp">
+                         15°C  
+                       </span>  
+                    </div>
+                </div>
+            `;
+    });
     
-    forecastHTML = forecastHTML + `
-                <div class="col-2">
-                    <div class="weather-forecast-date">
-                    Sun    
-                    </div>
-                    
-                    <br>
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="image" width="35"/>
-                    <div class="weather-forecast-temperatures">
-                       <span class="weather-forecast-maxTemp">
-                        10°C   
-                       </span>
-                       <span class="weather-forecast-minTemp">
-                         15°C  
-                       </span>  
-                    </div>
-                </div>
-            `;
-    forecastHTML = forecastHTML + `
-                <div class="col-2">
-                    <div class="weather-forecast-date">
-                    Sun    
-                    </div>
-                    
-                    <br>
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="image" width="35"/>
-                    <div class="weather-forecast-temperatures">
-                       <span class="weather-forecast-maxTemp">
-                        10°C   
-                       </span>
-                       <span class="weather-forecast-minTemp">
-                         15°C  
-                       </span>  
-                    </div>
-                </div>
-            `;
+    
     forecastHTML = forecastHTML + `</div>`;
      
     forecastElement.innerHTML = forecastHTML;
